@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from 'axios';
 
-
-
-const URL = "https://randomuser.me/api/?results=20&nat=us"
-export default {
-    getEmployees: function () {
-        return axios.get(URL);       
+const URL = 'https://randomuser.me/api/';
+const randomUsers = {
+    search: (query) => {
+        console.log(axios.get(URL + query))
+        return axios.get(URL + query);
     }
 }
+export default randomUsers;
