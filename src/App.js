@@ -1,21 +1,12 @@
-import React from "react";
-import SearchBar from "./components/SearchBar";
-import EmployeeTable from "./components/EmployeeTable"
-import API from "./utils/API"
+import './App.css';
 
-
+import Container from './components/container';
 
 function App() {
   return (
     <>
-    
-    <h1 >Employee Diroctory</h1>
-    <div>
-        <SearchBar />
-        <EmployeeTable />
-        
-    </div>
-    
+
+      <Container />
     </>
   );
 }

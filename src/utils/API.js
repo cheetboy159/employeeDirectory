@@ -1,10 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
+const url = "https://randomuser.me/api/?page=1&results=30";
 
-const URL = 'https://randomuser.me/api/';
-const randomUsers = {
-    search: (query) => {
-        console.log(axios.get(URL + query))
-        return axios.get(URL + query);
+const randomizer = {
+    search: function () {
+        return axios.get(url);
     }
-}
-export default randomUsers;
+};
+export default randomizer;
