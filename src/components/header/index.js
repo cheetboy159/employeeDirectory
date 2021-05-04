@@ -7,11 +7,10 @@ const style = {
     color: 'white',
     padding: '2rem 3rem'
 }
-function Header(props) {
+function Header() {
     return (
         <header style={style}>
             <h1 id="top">EMPLOYEE DIRECTORY</h1>
-
         </header>
     )
 }

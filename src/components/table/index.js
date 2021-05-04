@@ -2,10 +2,8 @@ import React from "react";
 
 function Table(props) {
     return (
-        <div id="tableCloth">
-            <table className="table">{props.children}</table>
-        </div>
+            <table>{props.children}</table>
+            
     )
 }
-
 export default Table;
