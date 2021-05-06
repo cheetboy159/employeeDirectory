@@ -29,14 +29,44 @@ class Container extends Component {
         console.log(peopleFilter);
         this.setState({ people: peopleFilter })
     }
-    sort() {
-
+    sort=(e)=> {
+        e.preventDefault();
+        const sortTerm = e.target.innerText;
+        console.log(sortTerm);
+        console.log(this.state)
+        const sortedPeople = this.state.originalPeople.sort((a,b) => {
+            if (sortTerm === "Last Name") {
+                if (a.name.last > b.name.last) {
+                    return 1;
+                }
+                return -1;
+            }
+            if (sortTerm === "Age") {
+                if (a.dob.age > b.dob.age) {
+                    return 1;
+                }
+                return -1;
+            }
+            if (sortTerm === "Female"){
+                if (a.gender>b.gender){
+                    return 1;
+                }
+                return -1;
+            }
+            if (sortTerm === "Male") {
+                if (a.gender < b.gender) {
+                    return 1;
+                }
+                return -1;
+            }
+        });
+        this.setState({people: sortedPeople})
     }
     render() {
         return <>
             <Header />
             <SearchBar filter={this.filter} />
-            <Sort filter={this.filter}/>
+            <Sort sort={this.sort}/>
             <Table> {this.state.people.map((person, index) => (
                 <PersonCard
                     key={"person " + index} name={person.name.first + " " + person.name.last}

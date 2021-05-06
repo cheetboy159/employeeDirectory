@@ -9,9 +9,9 @@ function PersonCard(props) {
     }
 
     return (
-        <div>
-            <div className="row" >
-                <div className="col-md-3" >
+
+
+                <div className="col-4" >
                     <div className="card" style={style}>
                         <img className="img-fluid" alt={props.picture} src={props.picture}></img>
                         <br></br>
@@ -23,8 +23,7 @@ function PersonCard(props) {
                         <br></br>
                     </div>
                 </div>
-            </div>
-        </div>
+
 
 
 
