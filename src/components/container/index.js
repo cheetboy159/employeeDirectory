@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import Table from "../table"
 import API from "../../utils/API";
 import Header from "../header"
-import SearchBar from "../searchBar"
-import PersonCard from "../PersonCard"
+import SearchBar from "../searchBar";
+import PersonCard from "../PersonCard";
+import Sort from "../sort";
 
 
 class Container extends Component {
@@ -35,6 +36,7 @@ class Container extends Component {
         return <>
             <Header />
             <SearchBar filter={this.filter} />
+            <Sort filter={this.filter}/>
             <Table> {this.state.people.map((person, index) => (
                 <PersonCard
                     key={"person " + index} name={person.name.first + " " + person.name.last}

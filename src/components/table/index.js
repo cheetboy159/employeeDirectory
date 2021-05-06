@@ -3,7 +3,13 @@ import React from "react";
 function Table(props) {
     return (
         <>
-            <table>{props.children}</table>   
+        <div className="row">
+            <div className="col-md">
+                {props.children}
+            </div>
+
+        </div>
+             
         </>
     )
 }

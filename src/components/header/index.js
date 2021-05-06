@@ -1,15 +1,10 @@
 import React from "react";
+import "./style.css"
 
-const style = {
-    backgroundColor: '#7596AC',
-    display: 'flex',
-    alignItems: 'center',
-    color: 'white',
-    padding: '2rem 3rem'
-}
+
 function Header() {
     return (
-        <header style={style}>
+        <header className="style">
             <h1 id="top">EMPLOYEE DIRECTORY</h1>
         </header>
     )

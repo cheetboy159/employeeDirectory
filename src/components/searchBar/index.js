@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 const style = {
     display: 'flex',
@@ -7,7 +8,7 @@ const style = {
 function SearchBar(props) {
     return (
         <>
-            <div className="input-group mb-3">
+            <div className="search input-group mb-3">
                 <input style={style}
                     id="search"
                     type="text"
@@ -15,7 +16,7 @@ function SearchBar(props) {
                     placeholder="search name"
                     aria-label="search name" />
                 <div className="input-group-append">
-                    <button class="btn btn-outline-secondary"
+                    <button className="button btn btn-outline-secondary"
                         id="button-addon2"
                         type="submit"
                         onClick={(event) => props.filter(document.querySelector("#search").value)}>search</button>
