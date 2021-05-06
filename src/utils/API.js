@@ -1,5 +1,5 @@
 import axios from "axios";
-const url = "https://randomuser.me/api/?page=1&results=30";
+const url = "https://randomuser.me/api/?page=1&results=60";
 
 const randomizer = {
     search: function () {
