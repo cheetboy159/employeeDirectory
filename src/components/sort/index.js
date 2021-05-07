@@ -1,6 +1,7 @@
 import React from "react";
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import "./style.css"
 
 
 function Sort(props) {
@@ -19,7 +20,7 @@ function Sort(props) {
                 4. creat sort function
             */}
 
-            <DropdownButton id="dropdown-basic-button" title="Sort By">
+            <DropdownButton className="sortButton" id="dropdown-basic-button" title="Sort By">
                 <Dropdown.Item onClick={props.sort}>Age</Dropdown.Item>
                 <Dropdown.Item onClick={props.sort}>Last Name</Dropdown.Item>
                 <Dropdown.Item onClick={props.sort}>Female</Dropdown.Item>

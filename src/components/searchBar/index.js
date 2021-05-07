@@ -22,6 +22,9 @@ function SearchBar(props) {
                         onClick={(event) => props.filter(document.querySelector("#search").value)}>search</button>
                 </div>
             </div>
+
+            
+
         </>
     )
 }

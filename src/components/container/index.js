@@ -65,7 +65,9 @@ class Container extends Component {
     render() {
         return <>
             <Header />
-            <SearchBar filter={this.filter} />
+            <SearchBar filter={this.filter} 
+            
+            />
             <Sort sort={this.sort}/>
             <Table> {this.state.people.map((person, index) => (
                 <PersonCard
